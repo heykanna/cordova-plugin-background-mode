@@ -71,7 +71,9 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <service android:name="de.appplant.cordova.plugin.background.ForegroundService" />
+                <service android:name="de.appplant.cordova.plugin.background.ForegroundService" android:foregroundServiceType="specialUse">
+                        <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Driver_mode"/>
+                </service>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
